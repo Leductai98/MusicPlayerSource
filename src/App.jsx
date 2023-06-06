@@ -440,49 +440,51 @@ function App() {
                         index + 1
                       )}
                     </div>{" "}
-                    <div
-                      className="item-button"
-                      onClick={() => {
-                        if (isPlaying && current !== index) {
-                          setCurrent(index);
-                        } else if (isPlaying && current === index) {
-                          setIsPlaying(false);
-                        } else if (!isPlaying && current === index) {
-                          setIsPlaying(true);
-                        } else {
-                          setIsPlaying(true);
-                          setCurrent(index);
-                        }
-                      }}
-                    >
-                      {isPlaying && current === index ? (
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          strokeWidth={0}
-                          viewBox="0 0 24 24"
-                          fontSize={30}
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M8 7h3v10H8zm5 0h3v10h-3z" />
-                        </svg>
-                      ) : (
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          strokeWidth={0}
-                          viewBox="0 0 24 24"
-                          fontSize={30}
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style={{ marginLeft: 4 }}
-                        >
-                          <path d="M7 6v12l10-6z" />
-                        </svg>
-                      )}
+                    <div className="item-button-wrap">
+                      <div
+                        className="item-button"
+                        onClick={() => {
+                          if (isPlaying && current !== index) {
+                            setCurrent(index);
+                          } else if (isPlaying && current === index) {
+                            setIsPlaying(false);
+                          } else if (!isPlaying && current === index) {
+                            setIsPlaying(true);
+                          } else {
+                            setIsPlaying(true);
+                            setCurrent(index);
+                          }
+                        }}
+                      >
+                        {isPlaying && current === index ? (
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            strokeWidth={0}
+                            viewBox="0 0 24 24"
+                            fontSize={30}
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M8 7h3v10H8zm5 0h3v10h-3z" />
+                          </svg>
+                        ) : (
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            strokeWidth={0}
+                            viewBox="0 0 24 24"
+                            fontSize={30}
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style={{ marginLeft: 4 }}
+                          >
+                            <path d="M7 6v12l10-6z" />
+                          </svg>
+                        )}
+                      </div>
                     </div>
                   </div>
                   <div className="item">{item.name}</div>

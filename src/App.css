@@ -398,17 +398,22 @@ input.music-volume-duration::-webkit-slider-thumb {
   width: fit-content;
   height: fit-content;
 }
-.item-button {
+.item-button-wrap {
   min-width: 100px;
-  text-align: center;
-  height: 44px;
-  line-height: 44px;
-
   justify-content: center;
   align-items: center;
   display: none;
 }
-.music-list-item:hover > .item-wrap .item-button {
+.item-button {
+  width: 40px;
+  text-align: center;
+  height: fit-content;
+  line-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music-list-item:hover > .item-wrap .item-button-wrap {
   display: flex;
 }
 .music-list-item:hover > .item-wrap .icon {
