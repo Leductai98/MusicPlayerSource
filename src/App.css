@@ -405,7 +405,7 @@ input.music-volume-duration::-webkit-slider-thumb {
   display: none;
 }
 .item-button {
-  width: 40px;
+  width: fit-content;
   text-align: center;
   height: fit-content;
   line-height: 44px;
